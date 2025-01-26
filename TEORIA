@@ -1,0 +1,26 @@
+Sortowanie Bąbelkowe
+Sortowanie bąbelkowe to najprostszy algorytm sortowania, który działa poprzez wielokrotne zamienianie sąsiednich elementów, jeśli są one w niewłaściwej kolejności.
+
+Przykład:   Dane wejściowe – (75 21 54 32 88)
+
+Pierwsze przejście:
+
+(75 21 54 32 88) -> (21 75 54 32 88), tutaj algorytm porównuje pierwsze dwa elementy i zamienia jeśli 75 > 21.
+(21 75 54 32 88) -> (21 54 75 32 88), Zamień jeśli 75 > 54
+(21 54 75 32 88) -> (21 54 32 75 88), Zamień jeśli 75 > 32
+(21 54 32 75 88) -> (21 54 32 75 88), Teraz, ponieważ te elementy są już w porządku 88 > 75, algorytm ich nie zamienia.
+
+Drugie przejście:
+
+(21 54 32 75 88) -> (21 54 32 75 88)
+(21 54 32 75 88) -> (21 32 54 75 88), Zamień 54 > 32
+(21 32 54 75 88) -> (21 32 54 75 88)
+(21 32 54 75 88) -> (21 32 54 75 88)
+Teraz tablica jest już posortowana, ale nasz algorytm nie wie, czy jest zakończony. Algorytm wymaga jednego całego przejścia bez wymiany, aby wiedzieć, że tablica jest posortowana.
+
+Trzeci przebieg:
+
+(21 32 54 75 88) -> (21 32 54 75 88)
+(21 32 54 75 88) -> (21 32 54 75 88)
+(21 32 54 75 88) -> (21 32 54 75 88)
+(21 32 54 75 88) -> (21 32 54 75 88)
