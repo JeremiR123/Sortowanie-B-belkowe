@@ -1,0 +1,23 @@
+```c
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(void)
+{
+  char *str = "547 042  793 a81 66";
+  char *pstr = str;
+  bool mute = false;
+  while(*pstr)
+  {
+    if(*pstr == ' ') {
+      if(!mute) putchar('\n');
+      mute = true;
+    }
+    else {
+      putchar(*pstr);
+      mute = false;
+    }
+    pstr++;
+  }
+}
+```
